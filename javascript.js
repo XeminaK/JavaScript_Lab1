@@ -1,4 +1,5 @@
-let game = prompt("Would you like to play a game?")
+//create a prompt and define variable
+let game = prompt("Would you like to play a game? (Type: yes or no)")
 let win = 0;
 let nameHP = 40;
 let GrantHP = 10;
@@ -6,7 +7,7 @@ if (game === "yes") {
     let name = prompt("What is your name?");
     //the main win condition is win the user has 3 wins
     while (nameHP >=0 && GrantHP > 0) {
-    console.log(`${name} has ${nameHP} and Grant has ${GrantHP} left`)
+    console.log(`${name} has ${nameHP} HP left and Grant has ${GrantHP} HP left`)
     //check the players HP
         if (nameHP >= 1) {
         //take away health from both grant and name
@@ -29,7 +30,16 @@ if (game === "yes") {
             console.log("You lost the game")
             break;
     }
-}
+}//would you like to play again prompt?
+ let game = prompt("Would you like to play again? (Type: yes or no)")
+ if (game === "yes") {
+    let name2 = prompt("What is your name?");
+    alert("Sorry I'm tired, but another time!")
+} else {
+    console.log("That's fine, we can play another time");
+    }
+
+//if you type in no you will get this response to the console
 
 } else {
   console.log("We can play another time");
